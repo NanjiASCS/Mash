@@ -6,7 +6,7 @@
 
 	2) Execute the function!
 */
-
+var houses = ["Mansion", "Apartment", "Shack", "House"];
 
 
 
@@ -20,7 +20,13 @@
 */
 
 
-
+function getHome() {
+	var n = Math.random() * houses.length;
+	n = Math.floor(n);
+	let randomHouse = houses[n];
+	return(randomHouse);
+}
+console.log(getHome())
 
 
 /*
@@ -31,8 +37,12 @@
 	5)Create a new function called 'getChildrenCount' that takes no parameters and 
 	returns a number between 0 and 100
 */
-
-
+function getChildrenCount(){
+	var kids = Math.random() * 101;
+	let wholeNumber = Math.trunc(kids);
+	return(wholeNumber);
+}
+console.log(getChildrenCount())
 
 /*
 	6)Modify the 'mash' function to RETURN the following string: 
@@ -47,9 +57,20 @@
 	9)Create a new function called 'getCar' which returns a random kind of vehicle such as: Tesla, Box With Wheels, Lambo...
 		i)include the user's third argument as a possible outcome
 */
+function mash () {
+	console.log("You will live in a " + getHome() + ", and you will have " + getChildrenCount() + " kids!")
+}
+mash();
 
+var cars = ["Batmobile", "Mario Kart", "Clown Car", "BumbleBee",]
 
-
+function getCar() {
+	let n = Math.random() * cars.length;
+	n = Math.floor(n);
+	let randomcar = cars[n];
+	console.log("You will also have a " + randomcar + " as your personal vehicle!");
+}
+getCar();
 /*
 	10)Modify the return string of the 'mash' function to include “, and you’ll drive a “ + getCar()
 
